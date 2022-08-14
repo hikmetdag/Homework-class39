@@ -24,7 +24,7 @@ const shoppingCart = ['bananas', 'milk'];
 
 // ! Function to be tested
 function addToShoppingCart(item) {
-  if(item!==undefined){
+  if(item){
   shoppingCart.push(item);}
  
 

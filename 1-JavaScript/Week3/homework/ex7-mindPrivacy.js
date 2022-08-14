@@ -33,8 +33,9 @@ const employeeRecords = [
 function filterPrivateData(employeeRecords) {
  
 
-  const newArr =employeeRecords.map(({ salary , gender , ...rest}) => {
-    return rest;
+  const newArr =employeeRecords.map(({name, occupation, email})=> {
+   
+    return {name, occupation, email}
   });
 return newArr
   }

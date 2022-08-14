@@ -21,26 +21,38 @@ instead!
 3. Complete the unit test functions and verify that all is working as expected.
 -----------------------------------------------------------------------------*/
 const cartForParty = {
-  apple:2.5, cola:3.7, icecream:2.5, cake:5.5, chips:3.25
+  apple: 2.5,
+  cola: 3.7,
+  icecream: 2.5,
+  cake: 5.5,
+  chips: 3.25,
 };
-const  sum=Object.values(cartForParty);
 
-function calculateTotalPrice() {
+function calculateTotalPrice(cartForParty) {
 
-const total=sum.reduce((a,b)=>a+b,0)
- 
-return `Total amount is ${total}`
+  const objectValues = Object.values(cartForParty);
+
+  const total = objectValues.reduce((a, b) => a + b, 0);
+console.log(total);
+  return `Total amount is €${total}`;
 }
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  console.log(calculateTotalPrice(sum));
+  const expected = 1;
+  
+  const actual = calculateTotalPrice.length;
+  
+  console.assert(expected === actual);
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
   // TODO replace this comment with your code
+  const expectedTotal=17.45;
+  const actualTotal=calculateTotalPrice(cartForParty)
+  console.assert(expectedTotal === actualTotal);
 }
 
 function test() {
