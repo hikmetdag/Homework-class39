@@ -1,0 +1,9 @@
+
+*** Spell Checker Report ***
+
+ex1-giveCompliment.js:22:80 - Unknown word (Zeer)
+ex1-giveCompliment.js:22:85 - Unknown word (goed)
+ex1-giveCompliment.js:22:97 - Unknown word (goed)
+ex1-giveCompliment.js:22:112 - Unknown word (gelek)
+ex1-giveCompliment.js:22:118 - Unknown word (cwanni)
+ex1-giveCompliment.js:29:19 - Unknown word (Hikmet)

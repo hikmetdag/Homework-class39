@@ -1,0 +1,6 @@
+
+*** Spell Checker Report ***
+
+ex3-tellFortune.js:48:30 - Unknown word (Veli)
+ex3-tellFortune.js:50:33 - Unknown word (Roterdam)
+ex3-tellFortune.js:50:44 - Unknown word (Almelo)

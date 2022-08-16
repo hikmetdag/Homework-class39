@@ -1,0 +1,4 @@
+
+*** Spell Checker Report ***
+
+ex6-totalCost.js:24:24 - Unknown word (icecream)

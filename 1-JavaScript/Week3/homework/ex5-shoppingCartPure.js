@@ -19,16 +19,9 @@ it pure. Do the following:
 
 function addToShoppingCart(arr, item) {
  
-  let shoppingCart = [...arr];
+return  [...arr,item].slice(-3);
 
-  if (item) {
-    shoppingCart.push(item);
-  }
-
-  if (shoppingCart.length > 3) {
-    shoppingCart.splice(0,1);
-  }
-  return shoppingCart;
+  
 }
 
 // ! Test functions (plain vanilla JavaScript)
