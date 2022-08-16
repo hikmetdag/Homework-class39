@@ -47,7 +47,7 @@ describe('sanitizeFruitBasket', () => {
   });
 
   test('should return a new array that does not include the unwanted `lemon`', () => {
-    // TODO replace next line with your code
+    // TODO replace next line with your code.
     const expected = ['apple', 'grapefruit', 'banana', 'watermelon'];
     const result = sanitizeFruitBasket(fruitBasket, 'lemon')
     expect(expected).toEqual(result);

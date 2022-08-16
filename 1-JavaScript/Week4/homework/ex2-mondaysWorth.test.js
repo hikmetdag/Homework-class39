@@ -45,7 +45,7 @@ function computeEarnings(mondayTasks, hourlyRate) {
 describe('computeEarnings', () => {
   test('should take two parameters', () => {
     // The `.length` property indicates the number of parameters expected by
-    // the function.
+    // the function..
     expect(computeEarnings).toHaveLength(2);
   });
 

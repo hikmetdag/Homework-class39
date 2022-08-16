@@ -7,7 +7,7 @@ passed as the `numbers` parameter and doubles them.
 Let's rewrite it (or _refactor_ it, as experienced developers would call it):
 
 - Using the `map` and `filter` functions, rewrite the function body of
-`doubleEvenNumbers`.
+`doubleEvenNumbers`..
 ------------------------------------------------------------------------------*/
 // ! Function to be tested
 function doubleEvenNumbers(numbers) {
