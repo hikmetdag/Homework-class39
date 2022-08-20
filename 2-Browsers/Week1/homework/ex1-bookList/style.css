@@ -1,1 +1,23 @@
-/* Write your style here */
+
+.book{
+    position: relative;
+    width: 23rem;
+    height: 20rem;
+    border: 1px solid black;
+    margin: 1rem;
+    padding:0.6rem;
+    list-style-type:none;
+}
+
+img{
+    width:11.6rem;
+    height:17rem;
+    text-align: left;
+   position: absolute;
+   bottom: 0.6rem;
+}
+
+.ullist{
+    display: flex;
+    flex-wrap: wrap;
+}
