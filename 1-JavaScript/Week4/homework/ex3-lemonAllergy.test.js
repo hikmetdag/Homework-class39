@@ -26,9 +26,9 @@ const fruitBasket = [
 ];
 
 // ! Function under test
-function sanitizeFruitBasket(fruitBasket,fruitName) {
+function sanitizeFruitBasket(fruitBasket,unWantedFruit) {
 
-return fruitBasket.filter(item=>item!==fruitName)
+return fruitBasket.filter(item=>item!==unWantedFruit)
 
 }
 

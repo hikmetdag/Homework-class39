@@ -29,14 +29,13 @@ const mondayTasks = [
   },
 ];
 
-const hourlyRate = 25;
+const rate = 25;
 
-function computeEarnings(mondayTasks, hourlyRate) {
+function computeEarnings(mondayTasks, rate) {
   return `€${mondayTasks
-    .map((item) => {
-      return (Number(item.duration)/ 60) * hourlyRate;
-    })
-    .reduce((a, b) => a + b, 0)
+    .map(mondayTask =>{return ((mondayTask.duration/ 60)* rate)}
+    )
+    .reduce((sum, value) => sum + value, 0)
     .toFixed(2)}`;
  
 }
@@ -50,7 +49,7 @@ describe('computeEarnings', () => {
   });
 
   test('should compute the earnings as a formatted Euro amount', () => {
-    const result = computeEarnings(mondayTasks, hourlyRate);
+    const result = computeEarnings(mondayTasks, rate);
     const expected = '€187.50';
     expect(result).toBe(expected);
   });
