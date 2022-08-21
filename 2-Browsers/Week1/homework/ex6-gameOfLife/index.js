@@ -13,10 +13,12 @@ const NUM_ROWS = 40;
 // life or death
 function createCell(x, y) {
   const alive = Math.random() > 0.5;
+  const lifeTime = alive ? 1 : 0;
   return {
     x,
     y,
     alive,
+    lifeTime,
   };
 }
 
@@ -101,7 +103,7 @@ function createGame(context, numRows, numColumns) {
 
       if (numAlive === 2) {
         // Living cell remains living, dead cell remains dead
-        cell.nextAlive = cell.alive;
+        cell.nextAlive = cell.alive;//nextAlive
       } else if (numAlive === 3) {
         // Dead cell becomes living, living cell remains living
         cell.nextAlive = true;
@@ -120,7 +122,7 @@ function createGame(context, numRows, numColumns) {
   // Render a visual representation of the grid
   function renderGrid() {
     // Draw all cells in the grid
-    forEachCell(drawCell);
+    forEachCell(drawCell);                          //bak
   }
 
   // Execute one game cycle
@@ -146,7 +148,7 @@ function createGame(context, numRows, numColumns) {
     renderGrid();
 
     // Kick-start the gameLoop
-    window.requestAnimationFrame(gameLoop);
+    window.requestAnimationFrame(gameLoop);            //bak
   }
 
   return { grid, updateGrid, start };
