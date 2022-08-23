@@ -37,12 +37,15 @@ function catWalk() {
    
       gifImg.src=gifDance
 
+     //Stop walk
+      clearInterval(walk);
+
       setTimeout(() => {
          gifImg.src = gifWalk
          walk=setInterval(catWalk,50)
-       }, 5000);
+       }, 2000);
 
-       clearInterval(walk);
+       
 
      } else if (gifPosition > screenWidth) {
       gifPosition = 0;
