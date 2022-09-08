@@ -1,0 +1,262 @@
+2022-09-08 12:12:58 info: ---------------------------------------
+2022-09-08 12:12:58 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-09-08 12:12:58 info: ---------------------------------------
+2022-09-08 12:13:05 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable (2 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    ✓ should call `new Promise()`
+    ✓ should take a single argument
+    ✓ `resolve()` should be called with a one argument (1 ms)
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when called with a string argument (2 ms)
+    ✕ should reject with an Error object when called without an argument (2 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "You didn't pass in a first name!"
+
+      90 |     timeoutSpy.mockRestore();
+      91 |     expect(promise).toBeInstanceOf(Promise);
+    > 92 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      93 |   });
+      94 | });
+      95 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:285:22)
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:92:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 7 passed, 9 total
+Snapshots:   0 total
+Time:        1.119 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "You didn't pass in a first name!".
+
+      28 |
+      29 | };
+    > 30 |
+         | ^
+      31 |
+      32 | getAnonName()
+      33 |   .then((res) => { console.log(res); })
+
+      at console.log (node_modules/@jest/console/build/CustomConsole.js:187:10)
+      at 3-UsingAPIs/Week1/homework/ex1-johnWho.js:30:11
+2022-09-08 12:13:08 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  38:3  error  'main' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-09-08 12:14:12 info: Disclaimer turned off
+2022-09-08 12:14:27 info: ---------------------------------------
+2022-09-08 12:14:27 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-09-08 12:14:27 info: ---------------------------------------
+2022-09-08 12:14:34 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✕ should exist and be executable (4 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    ✓ should call `new Promise()` (1 ms)
+    ✓ should take a single argument
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✕ should resolve when called with a string argument
+    ✕ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should exist and be executable
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      46 |
+      47 |   test('should exist and be executable', () => {
+    > 48 |     expect(exported).toBeDefined();
+         |                      ^
+      49 |   });
+      50 |
+      51 |   testTodosRemoved(() => source);
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:48:22)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● getAnonName › should resolve when called with a string argument
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      71 |   test('should resolve when called with a string argument', async () => {
+      72 |     expect.assertions(3);
+    > 73 |     expect(exported).toBeDefined();
+         |                      ^
+      74 |     const timeoutSpy = jest
+      75 |       .spyOn(global, 'setTimeout')
+      76 |       .mockImplementation((cb) => cb());
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:73:22)
+
+  ● getAnonName › should resolve when called with a string argument
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received one assertion call.
+
+      70 |
+      71 |   test('should resolve when called with a string argument', async () => {
+    > 72 |     expect.assertions(3);
+         |            ^
+      73 |     expect(exported).toBeDefined();
+      74 |     const timeoutSpy = jest
+      75 |       .spyOn(global, 'setTimeout')
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:72:12)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      83 |   test('should reject with an Error object when called without an argument', async () => {
+      84 |     expect.assertions(3);
+    > 85 |     expect(exported).toBeDefined();
+         |                      ^
+      86 |     const timeoutSpy = jest
+      87 |       .spyOn(global, 'setTimeout')
+      88 |       .mockImplementation((cb) => cb());
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:85:22)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received one assertion call.
+
+      82 |
+      83 |   test('should reject with an Error object when called without an argument', async () => {
+    > 84 |     expect.assertions(3);
+         |            ^
+      85 |     expect(exported).toBeDefined();
+      86 |     const timeoutSpy = jest
+      87 |       .spyOn(global, 'setTimeout')
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:84:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 5 passed, 9 total
+Snapshots:   0 total
+Time:        1.335 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2022-09-08 12:14:37 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  35:2  error  'n' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-09-08 12:30:10 info: ---------------------------------------
+2022-09-08 12:30:10 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-09-08 12:30:10 info: ---------------------------------------
+2022-09-08 12:30:19 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable (2 ms)
+    ✕ should have all TODO comments removed (5 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    ✓ should call `new Promise()`
+    ✓ should take a single argument (1 ms)
+    ✓ `resolve()` should be called with a one argument (1 ms)
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when called with a string argument (2 ms)
+    ✓ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        1.331 s, estimated 2 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2022-09-08 12:31:33 info: ---------------------------------------
+2022-09-08 12:31:33 info: >>> Running Unit Test `ex1-johnWho` <<<
+2022-09-08 12:31:33 info: ---------------------------------------
+2022-09-08 12:31:40 info: All unit tests passed.
+2022-09-08 12:31:47 info: All steps were completed successfully
