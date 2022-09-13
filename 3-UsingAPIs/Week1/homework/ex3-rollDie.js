@@ -41,6 +41,16 @@ function main() {
     .then((res) => console.log(`Success! Die settled on ${res}.`))
     .catch((er) => console.log(er.message));
 }
+
+/* 
+Explanation:
+In callback version,although the function throws an Error 
+it prints success message.
+
+In promise version,
+it does not print a success message 
+after throwing an error once.
+*/
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();

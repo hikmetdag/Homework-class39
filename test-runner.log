@@ -852,3 +852,13 @@ Error: Oops... Die rolled off the table.
 2022-09-08 11:03:32 info: ---------------------------------------
 2022-09-08 11:03:37 info: All unit tests passed.
 2022-09-08 11:03:43 info: All steps were completed successfully
+2022-09-12 10:10:26 info: --------------------------------------------
+2022-09-12 10:10:26 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-09-12 10:10:26 info: --------------------------------------------
+2022-09-12 10:10:35 info: All unit tests passed.
+2022-09-12 10:10:43 info: All steps were completed successfully
+2022-09-13 09:44:33 info: ----------------------------------------------
+2022-09-13 09:44:33 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2022-09-13 09:44:33 info: ----------------------------------------------
+2022-09-13 09:44:40 info: All unit tests passed.
+2022-09-13 09:44:46 info: All steps were completed successfully

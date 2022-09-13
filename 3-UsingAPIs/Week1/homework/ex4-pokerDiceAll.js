@@ -27,9 +27,10 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
+ 
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const promiseList = dice.map((element) => rollDie(element));
+  return Promise.all(promiseList);
 }
 
 function main() {
@@ -37,7 +38,7 @@ function main() {
     .then((results) => console.log('Resolved!', results))
     .catch((error) => console.log('Rejected!', error.message));
 }
-
+//The reason of  the roll continuous in case of rejected is to not reach end or return statement.
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
