@@ -1,0 +1,13 @@
+2022-09-16 10:04:38 info: ---------------------------------------------
+2022-09-16 10:04:38 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-09-16 10:04:38 info: ---------------------------------------------
+2022-09-16 10:04:56 info: All unit tests passed.
+2022-09-16 10:05:02 error: *** ESLint Report ***
+
+ex1-programmerFun/index.js
+  30:3  warning  Please do not use `innerHTML` in the homework. Use `textContent` and/or `document.createElement()` instead  no-restricted-syntax
+  35:3  warning  Please do not use `innerHTML` in the homework. Use `textContent` and/or `document.createElement()` instead  no-restricted-syntax
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
