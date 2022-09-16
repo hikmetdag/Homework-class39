@@ -11,3 +11,123 @@ ex1-programmerFun/index.js
 ✖ 2 problems (0 errors, 2 warnings)
 
 
+2022-09-17 12:53:03 info: ------------------------------------------
+2022-09-17 12:53:03 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-09-17 12:53:03 info: ------------------------------------------
+2022-09-17 12:53:19 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js (7.214 s)
+  pokemonApp
+    ✕ HTML should be syntactically valid (233 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()`
+    ✓ should use `await fetch()` (1 ms)
+    ✓ should use try/catch (1 ms)
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:2   error  <button> is missing required \"type\" attribute  element-required-attributes
+      12:90  error  <img> is missing required \"src\" attribute      element-required-attributes
+      12:90  error  <img> is missing required \"alt\" attribute      wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        7.49 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-09-17 12:53:24 error: *** ESLint Report ***
+
+ex2-pokemonApp/index.js
+  84:3  error  'fetchAndPopulatePokemons' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-09-17 12:56:31 info: ------------------------------------------
+2022-09-17 12:56:31 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-09-17 12:56:31 info: ------------------------------------------
+2022-09-17 12:56:46 info: All unit tests passed.
+2022-09-17 12:56:51 error: *** ESLint Report ***
+
+ex2-pokemonApp/index.js
+  87:3  error  'fetchAndPopulatePokemons' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-09-17 01:02:40 info: ------------------------------------------
+2022-09-17 01:02:40 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-09-17 01:02:40 info: ------------------------------------------
+2022-09-17 01:02:53 info: All unit tests passed.
+2022-09-17 01:03:02 info: All steps were completed successfully
+2022-09-17 01:09:03 info: ------------------------------------------
+2022-09-17 01:09:03 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-09-17 01:09:03 info: ------------------------------------------
+2022-09-17 01:09:18 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js (6.911 s)
+  pokemonApp
+    ✕ HTML should be syntactically valid (169 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()`
+    ✓ should use `await fetch()`
+    ✓ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:104  error  Attribute \"src\" has invalid value \"\"  attribute-allowed-values·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        7.2 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-09-17 01:11:05 info: ------------------------------------------
+2022-09-17 01:11:05 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-09-17 01:11:05 info: ------------------------------------------
+2022-09-17 01:11:17 info: All unit tests passed.
+2022-09-17 01:11:26 info: All steps were completed successfully
