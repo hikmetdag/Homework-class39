@@ -1,5 +1,5 @@
 'use strict';
-const { reject } = require('lodash');
+//const { reject } = require('lodash');
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-UsingAPIs/Week2/README.md#exercise-4-dice-race
 
@@ -15,8 +15,8 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  const dices = [1, 2, 3, 4, 5];
-  const promiseArray = dices.map(async (dice) => await rollDie(dice));
+  const dice = [1, 2, 3, 4, 5];
+  const promiseArray = dice.map(async (diceIndex) => await rollDie(diceIndex));
   return Promise.race(promiseArray);
 }
 
@@ -31,7 +31,7 @@ async function main() {
 }
 /* 
 Promise.race() only resolve one promise that finishes first.
-Otheres continue to run, but will not be resolved.
+Others continue to run, but will not be resolved.
 */
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
