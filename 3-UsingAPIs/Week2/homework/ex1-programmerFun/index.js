@@ -21,19 +21,15 @@ async function requestData(url) {
   const response = await fetch(url)
   if (response.ok) {
     return response.json()
-  } else {
-    throw new Error('Something goes wrong with Data Server!')
-  }
+  } 
+    throw new Error('Something goes wrong with Data Server!')  
 }
-
 function renderImage(src, alt) {
   document.body.innerHTML = String.raw`<img src='${src}' alt='${alt}'>`
-  console.log(src);
 }
 
 function renderError(error) {
   document.body.innerHTML = String.raw`<h1>${error}</h1>`
-  console.log(error);
 }
 
 async function main() {

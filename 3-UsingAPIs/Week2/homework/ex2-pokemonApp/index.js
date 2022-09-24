@@ -41,8 +41,8 @@ function createElements() {
 
   const image = document.createElement('img');
   image.id = 'img';
-  image.alt = 'alt'//In line 82 and 83, i already assigned value to alt and src
-  image.src = 'src'//To pass the test we need to add alt and src, without writing here It works perfectly
+  image.alt = '';
+  image.src = 'https://';
   imgDiv.appendChild(image);
 }
 createElements()
@@ -51,9 +51,8 @@ const fetchData = async (url) => {
   const response = await fetch(url)
   if (response.ok) {
     return response.json()
-  } else {
-    throw new Error('Something goes wrong with Data Server! ');
   }
+  throw new Error('Something goes wrong with Data Server! ');
 }
 
 async function fetchAndPopulatePokemons() {
