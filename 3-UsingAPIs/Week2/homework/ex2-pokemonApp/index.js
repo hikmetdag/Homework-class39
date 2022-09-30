@@ -77,7 +77,7 @@ const fetchImage = async (event) => {
   const imgEl = document.getElementById('img')
   const pokemonUrl = event.target.value;
   const dataPokemon = await (await fetch(pokemonUrl)).json();
-  imgEl.src = dataPokemon.sprites.front_default;
+  imgEl.src = dataPokemon.sprites.other['official-artwork'].front_default;
   imgEl.alt = `This is img of pokemon ${dataPokemon.name}`
 }
 
